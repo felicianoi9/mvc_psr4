@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Site</title>
+
+	<title>MVC PSR4</title>
 </head>
 <body>
-	<h1>Site</h1>
 	<?php $this->loadViewInTemplate($viewName, $viewData); ?>
+
 </body>
 </html>

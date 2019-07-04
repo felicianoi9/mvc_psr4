@@ -1,18 +1,20 @@
 <?php
 namespace Core;
 
-class Core {
+class Core 
+{
 
-	public function run() {
+	public function run() 
+	{
 
 		$url = '/';
-		if(isset($_GET['url'])) {
+		if (isset($_GET['url'])) {
 			$url .= $_GET['url'];
 		}
 
 		$params = array();
 
-		if(!empty($url) && $url != '/') {
+		if (!empty($url) && $url != '/') {
 			$url = explode('/', $url);
 			array_shift($url);
 
@@ -39,7 +41,7 @@ class Core {
 
 		$prefix = '\Controllers\\';
 
-		if(!file_exists('Controllers/'.$currentController.'.php') ||
+		if (!file_exists('Controllers/'.$currentController.'.php') ||
 			!method_exists($prefix.$currentController, $currentAction)) {
 			$currentController = 'NotfoundController';
 			$currentAction = 'index';
